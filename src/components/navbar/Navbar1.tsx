@@ -22,6 +22,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { ModeToggle } from '@/components/navbar/DarkModeToggle';
 
 interface MenuItem {
   title: string;
@@ -50,6 +51,8 @@ interface Navbar1Props {
     };
   };
 }
+
+
 
 const Navbar1 = ({
   logo = {
@@ -137,6 +140,10 @@ const Navbar1 = ({
 }: Navbar1Props) => {
   return (
     <section className="py-4">
+
+      <ModeToggle />
+
+
       <div className="container">
         {/* Desktop Menu */}
         <nav className="hidden justify-between lg:flex">

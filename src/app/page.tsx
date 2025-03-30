@@ -1,9 +1,7 @@
-import { Navbar1 } from '@/components/navbar/Navbar1';
-
-export default function Home() {
+export default function Page() {
   return (
-      <div className="container">
-      <Navbar1 />
-      </div>
+    <main className="flex min-h-screen items-center justify-center">
+      Replace me with Sanity Content
+    </main>
   );
 }

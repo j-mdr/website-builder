@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { MenuIcon } from "lucide-react";
+import { MenuIcon } from 'lucide-react';
 
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
+} from '@/components/ui/accordion';
+import { Button } from '@/components/ui/button';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -17,46 +17,46 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
+} from '@/components/ui/navigation-menu';
 import {
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
+} from '@/components/ui/sheet';
 
 const Navbar5 = () => {
   const features = [
     {
-      title: "Dashboard",
-      description: "Overview of your activity",
-      href: "#",
+      title: 'Dashboard',
+      description: 'Overview of your activity',
+      href: '#',
     },
     {
-      title: "Analytics",
-      description: "Track your performance",
-      href: "#",
+      title: 'Analytics',
+      description: 'Track your performance',
+      href: '#',
     },
     {
-      title: "Settings",
-      description: "Configure your preferences",
-      href: "#",
+      title: 'Settings',
+      description: 'Configure your preferences',
+      href: '#',
     },
     {
-      title: "Integrations",
-      description: "Connect with other tools",
-      href: "#",
+      title: 'Integrations',
+      description: 'Connect with other tools',
+      href: '#',
     },
     {
-      title: "Storage",
-      description: "Manage your files",
-      href: "#",
+      title: 'Storage',
+      description: 'Manage your files',
+      href: '#',
     },
     {
-      title: "Support",
-      description: "Get help when needed",
-      href: "#",
+      title: 'Support',
+      description: 'Get help when needed',
+      href: '#',
     },
   ];
 
@@ -87,13 +87,13 @@ const Navbar5 = () => {
                       <NavigationMenuLink
                         href={feature.href}
                         key={index}
-                        className="rounded-md p-3 transition-colors hover:bg-muted/70"
+                        className="hover:bg-muted/70 rounded-md p-3 transition-colors"
                       >
                         <div key={feature.title}>
-                          <p className="mb-1 font-semibold text-foreground">
+                          <p className="text-foreground mb-1 font-semibold">
                             {feature.title}
                           </p>
-                          <p className="text-sm text-muted-foreground">
+                          <p className="text-muted-foreground text-sm">
                             {feature.description}
                           </p>
                         </div>
@@ -168,13 +168,13 @@ const Navbar5 = () => {
                           <a
                             href={feature.href}
                             key={index}
-                            className="rounded-md p-3 transition-colors hover:bg-muted/70"
+                            className="hover:bg-muted/70 rounded-md p-3 transition-colors"
                           >
                             <div key={feature.title}>
-                              <p className="mb-1 font-semibold text-foreground">
+                              <p className="text-foreground mb-1 font-semibold">
                                 {feature.title}
                               </p>
-                              <p className="text-sm text-muted-foreground">
+                              <p className="text-muted-foreground text-sm">
                                 {feature.description}
                               </p>
                             </div>

@@ -1,11 +1,11 @@
-import { QueryParams } from "next-sanity";
-import { notFound } from "next/navigation";
+import { QueryParams } from 'next-sanity';
+import { notFound } from 'next/navigation';
 
-import { POSTS_QUERY, POST_QUERY } from "@/sanity/lib/queries";
+import { POSTS_QUERY, POST_QUERY } from '@/sanity/lib/queries';
 
-import { client } from "@/sanity/lib/client";
-import { sanityFetch } from "@/sanity/lib/live";
-import { Post } from "@/components/posts";
+import { client } from '@/sanity/lib/client';
+import { sanityFetch } from '@/sanity/lib/live';
+import { Post } from '@/components/posts';
 
 export async function generateStaticParams() {
   const posts = await client.fetch(POSTS_QUERY);
@@ -16,8 +16,8 @@ export async function generateStaticParams() {
 }
 
 export default async function Page({
-                                     params,
-                                   }: {
+  params,
+}: {
   params: Promise<QueryParams>;
 }) {
   const { data: post } = await sanityFetch({

@@ -1,4 +1,4 @@
-import { POSTS_QUERYResult } from "../../../sanity.types";
+import { POSTS_QUERYResult } from '../../../sanity.types';
 
 export function Posts({ posts }: { posts: POSTS_QUERYResult }) {
   return (
@@ -6,7 +6,7 @@ export function Posts({ posts }: { posts: POSTS_QUERYResult }) {
       {posts.map((post) => (
         <li key={post._id}>
           <a
-            className="block p-4 hover:bg-blue-50"
+            className="hover:bg-muted block p-4"
             href={`/posts/${post?.slug?.current}`}
           >
             {post?.title}

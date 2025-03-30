@@ -1,6 +1,6 @@
-import { Posts } from "@/components/posts";
-import { sanityFetch } from "@/sanity/lib/live";
-import { POSTS_QUERY } from "@/sanity/lib/queries";
+import { Posts } from '@/components/posts';
+import { sanityFetch } from '@/sanity/lib/live';
+import { POSTS_QUERY } from '@/sanity/lib/queries';
 
 export default async function Page() {
   const { data: posts } = await sanityFetch({

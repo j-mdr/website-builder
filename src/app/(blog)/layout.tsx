@@ -9,7 +9,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       {children}
       <SanityLive />
       {(await draftMode()).isEnabled && (

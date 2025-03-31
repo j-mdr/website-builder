@@ -5,7 +5,7 @@
  */
 
 import { visionTool } from '@sanity/vision';
-import { defineConfig } from 'sanity';
+import { defineConfig } from '@sanity-typed/types';
 import { structureTool } from 'sanity/structure';
 
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
@@ -13,9 +13,10 @@ import { apiVersion, dataset, projectId } from '@/sanity/env';
 import { schema } from '@/sanity/schemaTypes';
 import { structure } from '@/sanity/structure';
 import { presentationTool } from 'sanity/presentation';
-import { resolve } from '@/sanity/presentation/resolve'
+import { resolve } from '@/sanity/presentation/resolve';
+import type { InferSchemaValues } from '@sanity-typed/types';
 
-export default defineConfig({
+const config = defineConfig({
   basePath: '/studio',
   projectId,
   dataset,
@@ -35,3 +36,7 @@ export default defineConfig({
     }),
   ],
 });
+
+export type SanityValues = InferSchemaValues<typeof config>;
+
+export default config;

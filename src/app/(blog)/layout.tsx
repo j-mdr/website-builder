@@ -1,5 +1,5 @@
 import { SanityLive } from '@/sanity/lib/live';
-import { DisableDraftMode } from '@/components/disableDraftMode/DisableDraftMode';
+import { DisableDraftMode } from '@/app/_components/disableDraftMode/DisableDraftMode';
 import { VisualEditing } from 'next-sanity';
 import { draftMode } from 'next/headers';
 

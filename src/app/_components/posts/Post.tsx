@@ -1,10 +1,10 @@
-// src/components/Post.tsx
+// src/_components/Post.tsx
 
 import Image from 'next/image';
 import Link from 'next/link';
 import { PortableText } from '@portabletext/react';
 import { urlFor } from '@/sanity/lib/image';
-import { POST_QUERYResult } from '@/types/sanity';
+import { POST_QUERYResult } from '@/sanity/types/sanity';
 
 export function Post({ post }: { post: POST_QUERYResult }) {
   const { title, mainImage, body } = post || {};
@@ -23,7 +23,7 @@ export function Post({ post }: { post: POST_QUERYResult }) {
       ) : null}
       {body ? <PortableText value={body} /> : null}
       <hr />
-      <Link className="text-foreground" href="/">
+      <Link className="text-foreground" href="/public">
         &larr; Return home
       </Link>
     </main>

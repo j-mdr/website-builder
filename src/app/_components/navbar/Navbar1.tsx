@@ -5,8 +5,8 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components/ui/accordion';
-import { Button } from '@/components/ui/button';
+} from '@/app/_components/ui/accordion';
+import { Button } from '@/app/_components/ui/button';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -14,15 +14,15 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from '@/components/ui/navigation-menu';
+} from '@/app/_components/ui/navigation-menu';
 import {
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from '@/components/ui/sheet';
-import { ModeToggle } from '@/components/darkModeToggle/DarkModeToggle';
+} from '@/app/_components/ui/sheet';
+import { ModeToggle } from '@/app/_components/darkModeToggle/DarkModeToggle';
 
 interface MenuItem {
   title: string;

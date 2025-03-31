@@ -1,4 +1,4 @@
-import { POSTS_QUERYResult } from '@/types/sanity';
+import { POSTS_QUERYResult } from '@/sanity/types/sanity';
 
 export function Posts({ posts }: { posts: POSTS_QUERYResult }) {
   return (

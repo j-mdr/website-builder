@@ -17,6 +17,7 @@
     "@radix-ui/react-navigation-menu": "^1.2.5",
     "@radix-ui/react-slot": "^1.1.2",
     "@sanity-typed/client": "^5.0.0",
+    "@sanity-typed/types": "^8.0.0",
     "@sanity-typed/zod": "^4.0.0",
     "@sanity/client": "^6.28.4",
     "@sanity/icons": "^3.7.0",
@@ -25,6 +26,7 @@
     "@tailwindcss/typography": "^0.5.16",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "groq:": "link:@sanity-typed/groq:",
     "lucide-react": "^0.485.0",
     "next": "15.2.4",
     "next-sanity": "9",
@@ -40,7 +42,6 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@sanity-typed/types": "^8.0.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

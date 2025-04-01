@@ -68,6 +68,91 @@ export type Geopoint = {
   alt?: number;
 };
 
+export type NavigationItem = {
+  _type: 'navigationItem';
+  title?: string;
+  description?: string;
+  link?: Link;
+  subItems?: Array<
+    {
+      _key: string;
+    } & NavigationItem
+  >;
+};
+
+export type Link = {
+  _type: 'link';
+  linkType?: 'internal' | 'external';
+  internalLink?:
+    | {
+        _ref: string;
+        _type: 'reference';
+        _weak?: boolean;
+        [internalGroqTypeReferenceTo]?: 'page';
+      }
+    | {
+        _ref: string;
+        _type: 'reference';
+        _weak?: boolean;
+        [internalGroqTypeReferenceTo]?: 'post';
+      };
+  externalUrl?: string;
+};
+
+export type SiteConfig = {
+  _id: string;
+  _type: 'siteConfig';
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title?: string;
+  url?: string;
+  frontpage?: {
+    _ref: string;
+    _type: 'reference';
+    _weak?: boolean;
+    [internalGroqTypeReferenceTo]?: 'page';
+  };
+  mainNav?: {
+    _ref: string;
+    _type: 'reference';
+    _weak?: boolean;
+    [internalGroqTypeReferenceTo]?: 'navigation';
+  };
+  socialNav?: {
+    _ref: string;
+    _type: 'reference';
+    _weak?: boolean;
+    [internalGroqTypeReferenceTo]?: 'navigation';
+  };
+};
+
+export type Navigation = {
+  _id: string;
+  _type: 'navigation';
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title?: string;
+  navId?: Slug;
+  items?: Array<
+    {
+      _key: string;
+    } & NavigationItem
+  >;
+};
+
+export type Page = {
+  _id: string;
+  _type: 'page';
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title?: string;
+  slug?: Slug;
+  publishedAt?: string;
+};
+
 export type Post = {
   _id: string;
   _type: 'post';
@@ -82,18 +167,7 @@ export type Post = {
     _weak?: boolean;
     [internalGroqTypeReferenceTo]?: 'author';
   };
-  mainImage?: {
-    asset?: {
-      _ref: string;
-      _type: 'reference';
-      _weak?: boolean;
-      [internalGroqTypeReferenceTo]?: 'sanity.imageAsset';
-    };
-    hotspot?: SanityImageHotspot;
-    crop?: SanityImageCrop;
-    alt?: string;
-    _type: 'image';
-  };
+  heroImage?: ImageSet;
   categories?: Array<{
     _ref: string;
     _type: 'reference';
@@ -135,6 +209,22 @@ export type Post = {
         _key: string;
       }
   >;
+};
+
+export type ImageSet = {
+  _type: 'imageSet';
+  mainImage?: {
+    asset?: {
+      _ref: string;
+      _type: 'reference';
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: 'sanity.imageAsset';
+    };
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    alt?: string;
+    _type: 'image';
+  };
 };
 
 export type Author = {
@@ -290,7 +380,13 @@ export type AllSanitySchemaTypes =
   | SanityImageDimensions
   | SanityFileAsset
   | Geopoint
+  | NavigationItem
+  | Link
+  | SiteConfig
+  | Navigation
+  | Page
   | Post
+  | ImageSet
   | Author
   | Category
   | Slug
@@ -346,18 +442,7 @@ export type POST_QUERYResult = {
         _key: string;
       }
   > | null;
-  mainImage: {
-    asset?: {
-      _ref: string;
-      _type: 'reference';
-      _weak?: boolean;
-      [internalGroqTypeReferenceTo]?: 'sanity.imageAsset';
-    };
-    hotspot?: SanityImageHotspot;
-    crop?: SanityImageCrop;
-    alt?: string;
-    _type: 'image';
-  } | null;
+  mainImage: null;
 } | null;
 
 // Query TypeMap

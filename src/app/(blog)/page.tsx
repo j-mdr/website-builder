@@ -1,11 +1,3 @@
-import { Posts } from '@/app/_components/posts/Posts';
-import { sanityFetch } from '@/sanity/lib/live';
-import { POSTS_QUERY } from '@/sanity/lib/queries';
-
 export default async function Page() {
-  const { data: posts } = await sanityFetch({
-    query: POSTS_QUERY,
-  });
-
-  return <Posts posts={posts} />;
+  return <h2>Home page</h2>;
 }

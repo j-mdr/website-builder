@@ -22,7 +22,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/app/_components/ui/sheet';
-import { ModeToggle } from '@/app/_components/darkModeToggle/DarkModeToggle';
+import { DarkModeToggle } from '@/app/_components/darkModeToggle/DarkModeToggle';
 
 interface MenuItem {
   title: string;
@@ -138,7 +138,7 @@ const Navbar1 = ({
 }: Navbar1Props) => {
   return (
     <section className="py-4">
-      <ModeToggle />
+      <DarkModeToggle />
 
       <div className="container">
         {/* Desktop Menu */}

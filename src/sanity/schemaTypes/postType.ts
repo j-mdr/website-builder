@@ -24,9 +24,8 @@ export const postType = defineType({
       to: { type: 'author' },
     }),
     defineField({
-      name: 'hero',
-      type: 'reference',
-      to: { type: 'image' },
+      name: 'heroImage',
+      type: 'imageSet',
     }),
     defineField({
       name: 'categories',

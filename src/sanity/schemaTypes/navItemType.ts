@@ -7,14 +7,26 @@ export default {
   icon: GrNavigate,
   fields: [
     {
-      name: "text",
+      name: "title",
       type: "string",
-      title: "Navigation Text"
+      title: "Title",
+      required: true,
     },
     {
-      name: "navigationItemUrl",
+      name: "description",
+      type: "string",
+      title: "Description",
+    },
+    {
+      name: "link",
       type: "link",
-      title: "Navigation Item URL"
+      title: "Link"
+    },
+    {
+      name: "subItems",
+      type: "array",
+      title: "Sub items",
+      of: [{ type: "navigationItem" }]
     }
   ]
 }

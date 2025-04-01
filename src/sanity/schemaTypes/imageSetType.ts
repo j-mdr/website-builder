@@ -4,7 +4,7 @@ import { defineArrayMember, defineField, defineType } from 'sanity';
 export const imageSetType = defineType({
   name: 'imageSet',
   title: 'Image',
-  type: 'document',
+  type: 'object',
   icon: DocumentTextIcon,
   fields: [
     defineField({

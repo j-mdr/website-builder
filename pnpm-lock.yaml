@@ -26,15 +26,6 @@ importers:
       '@radix-ui/react-slot':
         specifier: ^1.1.2
         version: 1.1.2(@types/react@19.0.12)(react@19.1.0)
-      '@sanity-typed/client':
-        specifier: ^5.0.0
-        version: 5.0.0(@portabletext/types@2.0.13)(@sanity/client@6.28.4)(@types/geojson@7946.0.16)(sanity@3.81.0(@emotion/is-prop-valid@1.2.2)(@types/node@20.17.28)(@types/react@19.0.12)(jiti@2.4.2)(lightningcss@1.29.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.16(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(yaml@2.7.1))(typescript@5.8.2)
-      '@sanity-typed/types':
-        specifier: ^8.0.0
-        version: 8.0.0(@portabletext/types@2.0.13)(sanity@3.81.0(@emotion/is-prop-valid@1.2.2)(@types/node@20.17.28)(@types/react@19.0.12)(jiti@2.4.2)(lightningcss@1.29.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.16(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(yaml@2.7.1))(typescript@5.8.2)
-      '@sanity-typed/zod':
-        specifier: ^4.0.0
-        version: 4.0.0(@portabletext/types@2.0.13)(sanity@3.81.0(@emotion/is-prop-valid@1.2.2)(@types/node@20.17.28)(@types/react@19.0.12)(jiti@2.4.2)(lightningcss@1.29.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.16(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(yaml@2.7.1))(typescript@5.8.2)(zod@3.24.2)
       '@sanity/client':
         specifier: ^6.28.4
         version: 6.28.4(debug@4.4.0)
@@ -77,6 +68,9 @@ importers:
       react-dom:
         specifier: ^19.0.0
         version: 19.1.0(react@19.1.0)
+      react-icons:
+        specifier: ^5.5.0
+        version: 5.5.0(react@19.1.0)
       sanity:
         specifier: '3'
         version: 3.81.0(@emotion/is-prop-valid@1.2.2)(@types/node@20.17.28)(@types/react@19.0.12)(jiti@2.4.2)(lightningcss@1.29.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.16(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(yaml@2.7.1)
@@ -1597,12 +1591,6 @@ packages:
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
 
-  '@portabletext-typed/types@3.0.0':
-    resolution: {integrity: sha512-OPj8BgwfpZgoCqzU1O1m3naUJodyWF4+rNwrVamLkhY4juQbnc3Xj3MonSF7EqmX5hpEYljAjUj5G17z6keTsw==}
-    peerDependencies:
-      '@portabletext/types': ^2.0.2
-      typescript: 5.7.2 || 5.7.3
-
   '@portabletext/block-tools@1.1.15':
     resolution: {integrity: sha512-Ee1TdDWq/U5yBSsw2ZyF5ZXv2sRsvLatxXhdT5k7ySQ852c5AqIEmfS177iuSMt01fSuxIYDjjBdAaYaMefwOw==}
     peerDependencies:
@@ -2087,33 +2075,6 @@ packages:
   '@rushstack/eslint-patch@1.11.0':
     resolution: {integrity: sha512-zxnHvoMQVqewTJr/W4pKjF0bMGiKJv1WX7bSrkl46Hg0QjESbzBROWK0Wg4RphzSOS5Jiy7eFimmM3UgMrMZbQ==}
 
-  '@sanity-typed/client@5.0.0':
-    resolution: {integrity: sha512-SkfgTAtKpZ6209jj9aJlqiaFgI5ubNT6bsBJ/lQ24PIrbZQFkBCdHFCtEWr4+rueSZ6zH1JavqvTUnVjt1Vl8A==}
-    peerDependencies:
-      '@sanity/client': ^6.1.7
-      typescript: 5.7.2 || 5.7.3
-
-  '@sanity-typed/groq@3.0.0':
-    resolution: {integrity: sha512-4fWfY8t3BLsFhap+me9sXNxx3JjthvEmujsDIrjTPbX16YvIkMjeJzJXS2GYXUlSeNrBd2FF9aqIEmEXSB81gQ==}
-    peerDependencies:
-      '@sanity/client': ^6.1.7
-      '@types/geojson': ^7946.0.10
-      typescript: 5.7.2 || 5.7.3
-
-  '@sanity-typed/types@8.0.0':
-    resolution: {integrity: sha512-W9NRDXtznjaFjIOTBBktkHf8PN8VLkVfsq5MCbaO2pxgBQBmZ47pf+izJIPxXuEHtcY5/53/lyY+8CrI6tH5DQ==}
-    peerDependencies:
-      sanity: ^3.25.0
-      typescript: 5.7.2 || 5.7.3
-
-  '@sanity-typed/zod@4.0.0':
-    resolution: {integrity: sha512-7TlUqvH/bBU7RmEASizwslZf380TW/wMv2q1bvcLy+UoQdXIVUS7YGctgQZ0KotzRKzQpzRq094Yn/rZLzGHmg==}
-    engines: {node: ^18.17.0 || ^20.18.0}
-    peerDependencies:
-      sanity: ^3.25.0
-      typescript: 5.7.2 || 5.7.3
-      zod: ^3.21.4
-
   '@sanity/asset-utils@2.2.1':
     resolution: {integrity: sha512-dBsZWH5X6ANcvclFRnQT9Y+NNvoWTJZIMKR5HT6hzoRpRb48p7+vWn+wi1V1wPvqgZg2ScsOQQcGXWXskbPbQQ==}
     engines: {node: '>=18'}
@@ -2506,9 +2467,6 @@ packages:
 
   '@types/follow-redirects@1.14.4':
     resolution: {integrity: sha512-GWXfsD0Jc1RWiFmMuMFCpXMzi9L7oPDVwxUnZdg89kDNnqsRfUKXEtUYtA98A6lig1WXH/CYY/fvPW9HuN5fTA==}
-
-  '@types/geojson@7946.0.16':
-    resolution: {integrity: sha512-6C8nqWur3j98U6+lXDfTUWIfgvZU+EumvpHKcYjujKH7woYyLj2sUmff0tRhrqM7BohUw7Pz3ZB1jj2gW9Fvmg==}
 
   '@types/hast@2.3.10':
     resolution: {integrity: sha512-McWspRw8xx8J9HurkVBfYj0xKoE25tOFlHGdx4MJ5xORQrMGZNqJhVQWaIbm6Oyla5kYOXtDiopzKRJzEOkwJw==}
@@ -3864,10 +3822,6 @@ packages:
 
   graphemer@1.4.0:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==}
-
-  groq-builder@0.9.1:
-    resolution: {integrity: sha512-JMoCidT4MWquYl4bzjtt1kVWY6GIJIqiG3o0vLpfkXKvPMW7S18/Z2+wBmXbrTiCR6Mg5olXqtzfyYdGukaWiw==}
-    engines: {node: '>= 14'}
 
   groq-js@1.16.1:
     resolution: {integrity: sha512-n22UJPBYE8CLAlTOwXTZVjFH1a5+x2hORDv13zi1gwbR23CpvSLPioNtzVovotuAciLLH/pVJe9PyKOR5MykGg==}
@@ -5240,6 +5194,11 @@ packages:
       react-native:
         optional: true
 
+  react-icons@5.5.0:
+    resolution: {integrity: sha512-MEFcXdkP3dLo8uumGI5xN3lDFNsRtrjbOEKDLD7yv76v4wpnEq2Lt2qeHaQOr34I/wPN3s3+N08WkQ+CW37Xiw==}
+    peerDependencies:
+      react: '*'
+
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
@@ -5909,10 +5868,6 @@ packages:
   type-fest@0.8.1:
     resolution: {integrity: sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==}
     engines: {node: '>=8'}
-
-  type-fest@4.30.2:
-    resolution: {integrity: sha512-UJShLPYi1aWqCdq9HycOL/gwsuqda1OISdBO3t8RlXQC4QvtuIz4b5FCfe2dQIWEpmlRExKmcTBfP1r9bhY7ig==}
-    engines: {node: '>=16'}
 
   typed-array-buffer@1.0.3:
     resolution: {integrity: sha512-nAYYwfY3qnzX30IkA6AQZjVbtK6duGontcQm1WSG1MD94YLqK0515GNApXkoxKOWMusVssAHWLh9SeaoefYFGw==}
@@ -7831,12 +7786,6 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@portabletext-typed/types@3.0.0(@portabletext/types@2.0.13)(typescript@5.8.2)':
-    dependencies:
-      '@portabletext/types': 2.0.13
-      type-fest: 4.30.2
-      typescript: 5.8.2
-
   '@portabletext/block-tools@1.1.15(@sanity/types@3.81.0(@types/react@19.0.12)(debug@4.4.0))(@types/react@19.0.12)':
     dependencies:
       '@sanity/types': 3.81.0(@types/react@19.0.12)(debug@4.4.0)
@@ -8289,54 +8238,6 @@ snapshots:
   '@rtsao/scc@1.1.0': {}
 
   '@rushstack/eslint-patch@1.11.0': {}
-
-  '@sanity-typed/client@5.0.0(@portabletext/types@2.0.13)(@sanity/client@6.28.4)(@types/geojson@7946.0.16)(sanity@3.81.0(@emotion/is-prop-valid@1.2.2)(@types/node@20.17.28)(@types/react@19.0.12)(jiti@2.4.2)(lightningcss@1.29.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.16(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(yaml@2.7.1))(typescript@5.8.2)':
-    dependencies:
-      '@sanity-typed/groq': 3.0.0(@portabletext/types@2.0.13)(@sanity/client@6.28.4)(@types/geojson@7946.0.16)(sanity@3.81.0(@emotion/is-prop-valid@1.2.2)(@types/node@20.17.28)(@types/react@19.0.12)(jiti@2.4.2)(lightningcss@1.29.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.16(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(yaml@2.7.1))(typescript@5.8.2)
-      '@sanity-typed/types': 8.0.0(@portabletext/types@2.0.13)(sanity@3.81.0(@emotion/is-prop-valid@1.2.2)(@types/node@20.17.28)(@types/react@19.0.12)(jiti@2.4.2)(lightningcss@1.29.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.16(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(yaml@2.7.1))(typescript@5.8.2)
-      '@sanity/client': 6.28.4(debug@4.4.0)
-      lodash: 4.17.21
-      type-fest: 4.30.2
-      typescript: 5.8.2
-    optionalDependencies:
-      groq-builder: 0.9.1
-    transitivePeerDependencies:
-      - '@portabletext/types'
-      - '@types/geojson'
-      - sanity
-
-  '@sanity-typed/groq@3.0.0(@portabletext/types@2.0.13)(@sanity/client@6.28.4)(@types/geojson@7946.0.16)(sanity@3.81.0(@emotion/is-prop-valid@1.2.2)(@types/node@20.17.28)(@types/react@19.0.12)(jiti@2.4.2)(lightningcss@1.29.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.16(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(yaml@2.7.1))(typescript@5.8.2)':
-    dependencies:
-      '@portabletext-typed/types': 3.0.0(@portabletext/types@2.0.13)(typescript@5.8.2)
-      '@sanity-typed/types': 8.0.0(@portabletext/types@2.0.13)(sanity@3.81.0(@emotion/is-prop-valid@1.2.2)(@types/node@20.17.28)(@types/react@19.0.12)(jiti@2.4.2)(lightningcss@1.29.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.16(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(yaml@2.7.1))(typescript@5.8.2)
-      '@sanity/client': 6.28.4(debug@4.4.0)
-      '@types/geojson': 7946.0.16
-      type-fest: 4.30.2
-      typescript: 5.8.2
-    transitivePeerDependencies:
-      - '@portabletext/types'
-      - sanity
-
-  '@sanity-typed/types@8.0.0(@portabletext/types@2.0.13)(sanity@3.81.0(@emotion/is-prop-valid@1.2.2)(@types/node@20.17.28)(@types/react@19.0.12)(jiti@2.4.2)(lightningcss@1.29.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.16(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(yaml@2.7.1))(typescript@5.8.2)':
-    dependencies:
-      '@portabletext-typed/types': 3.0.0(@portabletext/types@2.0.13)(typescript@5.8.2)
-      sanity: 3.81.0(@emotion/is-prop-valid@1.2.2)(@types/node@20.17.28)(@types/react@19.0.12)(jiti@2.4.2)(lightningcss@1.29.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.16(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(yaml@2.7.1)
-      type-fest: 4.30.2
-      typescript: 5.8.2
-    transitivePeerDependencies:
-      - '@portabletext/types'
-
-  '@sanity-typed/zod@4.0.0(@portabletext/types@2.0.13)(sanity@3.81.0(@emotion/is-prop-valid@1.2.2)(@types/node@20.17.28)(@types/react@19.0.12)(jiti@2.4.2)(lightningcss@1.29.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.16(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(yaml@2.7.1))(typescript@5.8.2)(zod@3.24.2)':
-    dependencies:
-      '@portabletext-typed/types': 3.0.0(@portabletext/types@2.0.13)(typescript@5.8.2)
-      '@sanity-typed/types': 8.0.0(@portabletext/types@2.0.13)(sanity@3.81.0(@emotion/is-prop-valid@1.2.2)(@types/node@20.17.28)(@types/react@19.0.12)(jiti@2.4.2)(lightningcss@1.29.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.16(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(yaml@2.7.1))(typescript@5.8.2)
-      lodash: 4.17.21
-      sanity: 3.81.0(@emotion/is-prop-valid@1.2.2)(@types/node@20.17.28)(@types/react@19.0.12)(jiti@2.4.2)(lightningcss@1.29.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.16(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(yaml@2.7.1)
-      type-fest: 4.30.2
-      typescript: 5.8.2
-      zod: 3.24.2
-    transitivePeerDependencies:
-      - '@portabletext/types'
 
   '@sanity/asset-utils@2.2.1': {}
 
@@ -8931,8 +8832,6 @@ snapshots:
   '@types/follow-redirects@1.14.4':
     dependencies:
       '@types/node': 20.17.28
-
-  '@types/geojson@7946.0.16': {}
 
   '@types/hast@2.3.10':
     dependencies:
@@ -10568,12 +10467,6 @@ snapshots:
 
   graphemer@1.4.0: {}
 
-  groq-builder@0.9.1:
-    dependencies:
-      type-fest: 4.30.2
-      zod: 3.24.2
-    optional: true
-
   groq-js@1.16.1:
     dependencies:
       debug: 4.4.0(supports-color@8.1.1)
@@ -11796,6 +11689,10 @@ snapshots:
     optionalDependencies:
       react-dom: 19.1.0(react@19.1.0)
 
+  react-icons@5.5.0(react@19.1.0):
+    dependencies:
+      react: 19.1.0
+
   react-is@16.13.1: {}
 
   react-is@18.3.1: {}
@@ -12723,8 +12620,6 @@ snapshots:
   type-fest@0.6.0: {}
 
   type-fest@0.8.1: {}
-
-  type-fest@4.30.2: {}
 
   typed-array-buffer@1.0.3:
     dependencies:

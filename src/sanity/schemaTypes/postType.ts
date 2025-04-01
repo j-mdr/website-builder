@@ -1,5 +1,5 @@
 import { DocumentTextIcon } from '@sanity/icons';
-import { defineArrayMember, defineField, defineType } from '@sanity-typed/types';
+import { defineArrayMember, defineField, defineType } from 'sanity';
 
 export const postType = defineType({
   name: 'post',
@@ -21,26 +21,17 @@ export const postType = defineType({
     defineField({
       name: 'author',
       type: 'reference',
-      to: [{ type: 'author' }],
+      to: { type: 'author' },
     }),
     defineField({
-      name: 'mainImage',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-      fields: [
-        defineField({
-          name: 'alt',
-          type: 'string',
-          title: 'Alternative text',
-        }),
-      ],
+      name: 'hero',
+      type: 'reference',
+      to: { type: 'image' },
     }),
     defineField({
       name: 'categories',
       type: 'array',
-      of: [defineArrayMember({ type: 'reference', to: [{ type: 'category' }] })],
+      of: [defineArrayMember({ type: 'reference', to: { type: 'category' } })],
     }),
     defineField({
       name: 'publishedAt',

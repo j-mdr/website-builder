@@ -28,11 +28,6 @@ export const postType = defineType({
       type: 'imageSet',
     }),
     defineField({
-      name: 'categories',
-      type: 'array',
-      of: [defineArrayMember({ type: 'reference', to: { type: 'category' } })],
-    }),
-    defineField({
       name: 'publishedAt',
       type: 'datetime',
     }),

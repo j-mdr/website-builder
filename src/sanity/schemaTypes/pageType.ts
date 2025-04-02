@@ -24,20 +24,36 @@ export const pageType = defineType({
       type: 'datetime',
     }),
     defineField({
-      name: 'parentPage',
+      name: 'parent',
       title: 'Parent page',
       type: 'reference',
       to: { type: 'page' },
+      // This ensures we cannot select other "children"
       options: {
         filter: ({ document }) => {
+          // Verwijder de 'drafts.' prefix als die aanwezig is
+          const baseDocId = document._id.replace(/^drafts\./, '');
           return {
-            filter: '_id != $documentId',
+            filter: '!(_id in [$docId, $draftDocId]) && !defined(parent)',
             params: {
-              documentId: document._id,
+              docId: baseDocId,
+              draftDocId: `drafts.${baseDocId}`,
             },
           };
         },
       },
     }),
   ],
+  // Customize the preview so parents are visualized in the studio
+  preview: {
+    select: {
+      title: 'title',
+      path: 'slug.current',
+      parentPath: 'parent.slug.current',
+    },
+    prepare: ({ title, path, parentPath }) => ({
+      title,
+      subtitle: parentPath ? `${parentPath}/${path}` : path,
+    }),
+  },
 });

@@ -9,7 +9,7 @@ export const siteConfigType = {
       title: 'Site title',
     },
     {
-      title: 'URL',
+      title: 'Site URL',
       name: 'url',
       type: 'url',
       description: 'The main site url. Used to create canonical url',

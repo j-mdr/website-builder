@@ -21,12 +21,15 @@ export const MAIN_NAV_QUERY = defineQuery(`*[_type == "siteConfig"][0]{
       "link": link{
         _type,
         linkType,
+        openedInNewTab,
+        externalLink,
         "internalLink": select(
           linkType == 'internal' && defined(internalLink) => internalLink->{
             _id,
-            _type,
-            title,
-            slug
+            "slug": select(
+              defined(parent) => parent->slug.current + "/" + slug.current,
+              slug.current
+            )
           }
         )
       },
@@ -36,12 +39,15 @@ export const MAIN_NAV_QUERY = defineQuery(`*[_type == "siteConfig"][0]{
         "link": link{
           _type,
           linkType,
+          openedInNewTab,
+          externalLink,
           "internalLink": select(
             linkType == 'internal' && defined(internalLink) => internalLink->{
               _id,
-              _type,
-              title,
-              slug
+              "slug": select(
+                defined(parent) => parent->slug.current + "/" + slug.current,
+                slug.current
+              )
             }
           )
         }

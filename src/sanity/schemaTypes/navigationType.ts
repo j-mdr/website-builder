@@ -1,4 +1,4 @@
-import { GrNavigate } from "react-icons/gr";
+import { GrNavigate } from 'react-icons/gr';
 
 export const navigationType = {
   name: 'navigation',
@@ -7,20 +7,22 @@ export const navigationType = {
   icon: GrNavigate,
   fields: [
     {
-      name: "title",
-      type: "string",
-      title: "Title"
+      name: 'title',
+      type: 'string',
+      title: 'Titel',
     },
     {
       name: 'navId',
       type: 'slug',
-      title: "Navigation Id"
+      title: 'Menu ID',
+      description: 'Voer een unieke ID in voor dit menu',
     },
     {
-      name: "items",
-      type: "array",
-      title: "Navigation items",
-      of: [{ type: "navigationItem" }]
-    }
-  ]
-}
+      name: 'items',
+      type: 'array',
+      title: 'Menu items',
+      required: true,
+      of: [{ type: 'navigationItem' }],
+    },
+  ],
+};

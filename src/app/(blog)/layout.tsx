@@ -1,5 +1,5 @@
 import { SanityLive } from '@/sanity/lib/live';
-import { DisableDraftMode } from '@/app/_components/disableDraftMode/DisableDraftMode';
+import { DisableDraftModeComponentClient } from '@/components/disable-draft-mode/disable-draft-mode.component.client';
 import { VisualEditing } from 'next-sanity';
 import { draftMode } from 'next/headers';
 
@@ -14,7 +14,7 @@ export default async function RootLayout({
       <SanityLive />
       {(await draftMode()).isEnabled && (
         <>
-          <DisableDraftMode />
+          <DisableDraftModeComponentClient />
           <VisualEditing />
         </>
       )}

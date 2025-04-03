@@ -3,8 +3,8 @@ import {
   MainNavResponseSchema,
   NavigationItem,
   NavigationSubItem,
-} from './zod'; // Je export types
-import { NavBarItemProps } from './NavBarItem';
+} from './nav-bar-5.schema'; // Je export types
+import { NavBarItemProps } from './nav-bar-item.component.client';
 
 /**
  * Bepaalt de URL op basis van het linktype en de beschikbare linkgegevens

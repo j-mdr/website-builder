@@ -1,7 +1,8 @@
-import * as React from 'react';
+'use server';
+
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 
-export function ThemeProvider({
+export async function ThemeProviderComponentServer({
   children,
   ...props
 }: React.ComponentProps<typeof NextThemesProvider>) {

@@ -1,10 +1,12 @@
+'use client';
+
 import {
   NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from '@/app/_components/ui/navigation-menu';
+} from '@/components/ui/navigation-menu';
 
 export type NavBarItemProps = {
   title: string;
@@ -13,7 +15,7 @@ export type NavBarItemProps = {
   subItems?: Exclude<NavBarItemProps, 'subItems'>[];
 };
 
-export const NavBarItem = ({
+export const NavBarItemComponentClient = ({
   title,
   description,
   href,

@@ -5,7 +5,7 @@ import { POSTS_QUERY, POST_QUERY } from '@/sanity/lib/queries';
 
 import { client } from '@/sanity/lib/client';
 import { sanityFetch } from '@/sanity/lib/live';
-import { Post } from '@/app/_components/posts/Post';
+import { Post } from '@/components/posts/Post';
 
 export async function generateStaticParams() {
   const posts = await client.fetch(POSTS_QUERY);

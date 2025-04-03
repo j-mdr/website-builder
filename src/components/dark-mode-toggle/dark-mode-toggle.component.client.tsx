@@ -7,11 +7,11 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/app/_components/ui/dropdown-menu';
-import { Button } from '@/app/_components/ui/button';
+} from '@/components/ui/dropdown-menu';
+import { Button } from '@/components/ui/button';
 import { Moon, Sun } from 'lucide-react';
 
-export function DarkModeToggle() {
+export function DarkModeToggleComponentClient() {
   const [mounted, setMounted] = useState(false);
   const { setTheme } = useTheme();
 

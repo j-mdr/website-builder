@@ -7,20 +7,23 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/app/_components/ui/accordion';
-import { Button } from '@/app/_components/ui/button';
+} from '@/components/ui/accordion';
+import { Button } from '@/components/ui/button';
 import {
   NavigationMenu,
   NavigationMenuList,
-} from '@/app/_components/ui/navigation-menu';
+} from '@/components/ui/navigation-menu';
 import {
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from '@/app/_components/ui/sheet';
-import { NavBarItem, NavBarItemProps } from './NavBarItem';
+} from '@/components/ui/sheet';
+import {
+  NavBarItemComponentClient,
+  NavBarItemProps,
+} from './nav-bar-item.component.client';
 
 type NavBarProps = {
   title?: string;
@@ -49,7 +52,9 @@ const Navbar5 = ({ items }: NavBarProps) => {
           <NavigationMenu className="hidden lg:block">
             <NavigationMenuList>
               {items.length > 0
-                ? items.map((feature, index) => <NavBarItem {...feature} />)
+                ? items.map((feature, index) => (
+                    <NavBarItemComponentClient key={index} {...feature} />
+                  ))
                 : null}
             </NavigationMenuList>
           </NavigationMenu>

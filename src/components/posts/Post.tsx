@@ -1,4 +1,4 @@
-// src/_components/Post.tsx
+// src/components/Post.tsx
 
 import Image from 'next/image';
 import Link from 'next/link';
